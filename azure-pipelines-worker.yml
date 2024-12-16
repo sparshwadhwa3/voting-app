@@ -22,7 +22,6 @@ variables:
 pool:
  name: 'myagent'
 
-appendCommitMessageToRunName:
 stages:
 - stage: Build
   displayName: Build
