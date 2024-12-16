@@ -2,7 +2,7 @@
 
 set -x
 
-REPO_URL="https://<ACCESS-TOKEN>@dev.azure.com/sparshwadhwadevops/_git/LearningAzureDevops"
+REPO_URL="https://BAFGCFPIpQJm3SSCEPbBJUgLlmmdPmbNituL15uHxscteS8r2AyMJQQJ99ALACAAAAAAAAAAAAASAZDOJ9wU@dev.azure.com/sparshwadhwadevops/LearningAzureDevops/_git/LearningAzureDevops"
 
 git clone "$REPO_URL" /tmp/temp_repo
 
