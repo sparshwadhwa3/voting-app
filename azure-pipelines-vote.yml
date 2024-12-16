@@ -41,7 +41,7 @@ stages:
 - stage: Push
   displayName: Push
   jobs:
-  - job: Build
+  - job: Push
     displayName: Push
     steps:
     - task: Docker@2
@@ -51,3 +51,14 @@ stages:
         repository: '$(imageRepository)'
         command: 'push'
         tags: '$(tag)'
+
+- stage: Update
+  displayName: Update
+  jobs:
+  - job: Update
+    displayName: Update
+    steps:
+    - task: ShellScript@2
+      inputs:
+        scriptPath: 'updateK8sMnifests.sh'
+        args: 'vote $imageRepository $tag'
