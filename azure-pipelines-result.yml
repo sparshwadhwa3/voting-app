@@ -25,8 +25,9 @@ pool:
 stages:
 - stage: Build
   displayName: Build
+  jobs:
   - job: Build
-     displayName: Build
+    displayName: Build
 
     steps:
     - task: Docker@2
@@ -37,10 +38,12 @@ stages:
         command: 'build'
         Dockerfile: 'result/Dockerfile'
         tags: '$(tag)'
+
 - stage: Push
   displayName: Push
+  jobs:
   - job: Push
-     displayName: Push
+    displayName: Push
 
     steps:
     - task: Docker@2
